@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>00 - Introduction slides</title>
+<title>02-Basic Python(Variables, Datatypes, Control Structures) slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11830,7 +11830,17 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Learning-Python">Learning Python<a class="anchor-link" href="#Learning-Python">&#182;</a></h1>
+<h1 id="Basics-Of-the-Python-Language">Basics Of the Python Language<a class="anchor-link" href="#Basics-Of-the-Python-Language">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Preliminary-Settings">Preliminary Settings<a class="anchor-link" href="#Preliminary-Settings">&#182;</a></h2><hr>
+
 </div>
 </div>
 </div><div class="fragment">
@@ -11839,47 +11849,87 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Kushal. K. R (kushalkr2992@gmail.com)</p>
-<p>These notebooks can be found at <a href="https://github.com/Kushalkr/Learning-Python">https://github.com/Kushalkr/Learning-Python</a></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="About-this-tutorial">About this tutorial<a class="anchor-link" href="#About-this-tutorial">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This was a personal project of mine for learning and using python to Visualize data obtained from climate models and various observations in the field of Atmospheric Science.
-This tutorial is mainly intended towards beginners in programming.
-Prior knowledge of programming is not assumed but it is good if the user has experience with some programmming language.</p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-you-will-be-learning">What you will be learning<a class="anchor-link" href="#What-you-will-be-learning">&#182;</a></h2><p>The topics that will be covered are:</p>
 <ul>
-<li>What is Python?</li>
-<li>Installing Python and necessary packages</li>
-<li>Basics (Data types, Conditions, Loops)</li>
-<li>File I/O</li>
-<li>Numpy and Matplotlib</li>
-<li>Reading and Plotting NetCDF Files (Using Cartopy)</li>
+<li>Go to Spyder &gt; Tools &gt; Preferences &gt; Ipython Console &gt; Graphics</li>
+<li>Select Activate support</li>
+<li>Set backend to Qt or Tkinter (Qt)</li>
+<li>Got to Advanced Settings</li>
+<li>Select Greedy Completer</li>
+<li>Press apply and ok.</li>
+<li>Go to the ipython console and type <code>%matplotlib qt</code>(This is for making plots come as a separate window)</li>
+<li>Set the Working Directory in the File Explorer</li>
+<li>Copy the path of the Working Directory</li>
+<li>type cd (in the ipython console) and paste the path and enter</li>
+<li>Keep cursor near any command and press Ctrl+I for documentation.</li>
 </ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-the-Interpreter">Using the Interpreter<a class="anchor-link" href="#Using-the-Interpreter">&#182;</a></h2><hr>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercise-1">Exercise 1<a class="anchor-link" href="#Exercise-1">&#182;</a></h3><ul>
+<li>Open up spyder and navigate to the tab which says <strong>ipython console</strong>.</li>
+<li>type <code>print "hello world!"</code> and press Enter.</li>
+</ul>
+<p>copy the above command into the editor and save the file as <code>hello.py</code>. The ".py" extension tells us and the interpreter that it is a python script.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python can also be used as a calculator.</p>
+<h3 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">&#182;</a></h3><ul>
+<li>In spyder open a new text file and enter the following commands. Try to predict what they will print before running the script.</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="k">print</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="k">print</span> <span class="s2">&quot;3 + 5&quot;</span>
+<span class="k">print</span> <span class="mi">6</span><span class="o">/</span><span class="mi">2</span>
+<span class="k">print</span> <span class="mi">6</span><span class="o">//</span><span class="mi">2</span>
+<span class="k">print</span> <span class="mi">5</span><span class="o">*</span><span class="mi">4</span>
+<span class="k">print</span> <span class="mi">5</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sample-Python-program">Sample Python program<a class="anchor-link" href="#Sample-Python-program">&#182;</a></h2><hr>
+<div class="highlight"><pre><span></span><span class="c1"># This is a single line comment</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Program to find the factorial of a number.</span>
+<span class="sd">    This is also a docstring or a document string</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a positive integer&quot;</span><span class="p">)</span> <span class="c1"># To get user input data</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mi">1</span>                                 <span class="c1"># To initialize the fact value</span>
+<span class="k">if</span> <span class="n">n</span> <span class="ow">is</span> <span class="mi">1</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">:</span>                       <span class="c1"># To check if n is 0 or 1</span>
+    <span class="nb">exit</span>                              <span class="c1"># To exit the if statement</span>
+<span class="k">else</span><span class="p">:</span>                                 <span class="c1"># To proceed further</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>           <span class="c1"># To start a loop from 2 to n.</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="n">f</span><span class="o">*</span><span class="n">i</span>                       <span class="c1"># Also written as f *= i</span>
+<span class="k">print</span> <span class="s2">&quot;The value of {}! is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
 
 </div>
 </div>
@@ -11889,7 +11939,35 @@ Prior knowledge of programming is not assumed but it is good if the user has exp
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-is-Python?">What is Python?<a class="anchor-link" href="#What-is-Python?">&#182;</a></h2>
+<h2 id="Comments">Comments<a class="anchor-link" href="#Comments">&#182;</a></h2><hr>
+<p>Comment - Lines that are ignored when the program is run. Used for excluding codes and for including messages.</p>
+<div class="highlight"><pre><span></span><span class="c1"># This is a single line comment</span>
+<span class="c1"># Comment begins with a hash # symbol</span>
+</pre></div>
+<p>Docstrings - Document strings. Multi-line comments. But more useful for including help/direction messages that appear when help utilities are called.</p>
+<div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is a Docstring. It starts and ends with </span>
+<span class="sd">    triple &quot; or triple &#39; quotes. Mix and match does not work!</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Primary-Data-Types">Primary Data Types<a class="anchor-link" href="#Primary-Data-Types">&#182;</a></h2><hr>
+<p>There are certain standard data types that are used in python.</p>
+<div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># This is an integer.</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">5.52</span> <span class="c1"># This a float which stores numbers with decimal parts.</span>
+<span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span> <span class="c1"># This is a single character.</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span> <span class="c1"># This is a string.</span>
+<span class="n">l</span> <span class="o">=</span> <span class="bp">True</span><span class="o">/</span><span class="bp">False</span> <span class="c1"># This is a logical.</span>
+</pre></div>
+
 </div>
 </div>
 </div><div class="fragment">
@@ -11898,7 +11976,18 @@ Prior knowledge of programming is not assumed but it is good if the user has exp
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Python is a <strong>High Level</strong>, <strong>Interpreted</strong>, <strong>Objected-Oriented</strong> programming language.</p>
+<h2 id="Operators">Operators<a class="anchor-link" href="#Operators">&#182;</a></h2><hr>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>        <span class="c1"># Addition</span>
+<span class="n">a</span> <span class="o">-</span> <span class="n">b</span>        <span class="c1"># Subtraction</span>
+<span class="n">a</span> <span class="o">*</span> <span class="n">b</span>        <span class="c1"># Multiplication</span>
+<span class="n">a</span> <span class="o">/</span> <span class="n">b</span>        <span class="c1"># Division</span>
+<span class="n">a</span> <span class="o">**</span> <span class="n">b</span>       <span class="c1"># Exponent</span>
+<span class="n">a</span> <span class="o">+=</span> <span class="n">b</span>       <span class="c1"># Increment</span>
+<span class="ow">and</span><span class="p">,</span> <span class="ow">or</span><span class="p">,</span> <span class="ow">not</span> <span class="c1"># Logical</span>
+<span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="p">,</span> <span class="o">==</span>     <span class="c1"># Relational</span>
+<span class="ow">in</span><span class="p">,</span> <span class="ow">not</span> <span class="ow">in</span>   <span class="c1"># Membership</span>
+<span class="ow">is</span><span class="p">,</span> <span class="ow">is</span> <span class="ow">not</span>   <span class="c1"># Identity</span>
+</pre></div>
 
 </div>
 </div>
@@ -11908,7 +11997,165 @@ Prior knowledge of programming is not assumed but it is good if the user has exp
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Why-Python?">Why Python?<a class="anchor-link" href="#Why-Python?">&#182;</a></h2>
+<h2 id="Lists">Lists<a class="anchor-link" href="#Lists">&#182;</a></h2><hr>
+<p><strong>Mutable</strong>, Multi-level non-homogenous arrays that can hold multiple data types.</p>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="bp">True</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hello,&#39;</span><span class="p">,</span> <span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="s1">&#39;of&#39;</span><span class="p">,</span> <span class="s1">&#39;strings&#39;</span> <span class="p">]</span>
+</pre></div>
+<p>the list elements are accessed by [ ]. the indexing starts from 0.</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tuples">Tuples<a class="anchor-link" href="#Tuples">&#182;</a></h2><hr>
+<p><strong>Immutable</strong>, Multi-level non-homogenous arrays that can hold multiple data types.</p>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mf">3.1415</span><span class="p">,</span> <span class="mi">872</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mf">9.46</span><span class="p">),</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+<p>the elements of a tuple are accessed by ( ). the indexing starts is same as that for lists.</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h2><hr>
+<p>Dictionaries are a very powerful datatypes. They are composite data types having what is known as <strong>key-value</strong> pairs. This is especially important in creating files in the the field of atmospheric science.</p>
+<p>A typical dictionary is</p>
+<div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:[</span><span class="mi">5</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="s1">&#39;names&#39;</span><span class="p">}</span>
+</pre></div>
+<p>where the dictionary is defined as <strong>key:value</strong>.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:[</span><span class="mi">5</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="s1">&#39;names&#39;</span><span class="p">}</span>
+<span class="k">print</span> <span class="n">data</span>
+<span class="k">print</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;a&#39;: 5, &#39;c&#39;: &#39;names&#39;, &#39;b&#39;: [5, 7.0, 9]}
+5
+[5, 7.0, 9]
+names
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Numpy-Arrays">Numpy Arrays<a class="anchor-link" href="#Numpy-Arrays">&#182;</a></h2><hr>
+<p>For scientific computing, the most important data type is the n-dimensional array. The ndarray data type is defined in the module numpy. The numpy module has to be first imported. To import numpy, type</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+<p>The above line imports the numpy module. While writing scripts, the import statements generally goes at the beginning of the script. Below are few examples of using numpy modules:</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Numpy-Arrays">Numpy Arrays<a class="anchor-link" href="#Numpy-Arrays">&#182;</a></h2><hr>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mf">7.0</span><span class="p">,</span> <span class="mf">20.</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;type &#39;list&#39;&gt;
+&lt;type &#39;tuple&#39;&gt;
+&lt;type &#39;numpy.ndarray&#39;&gt;
+&lt;type &#39;numpy.ndarray&#39;&gt;
+int64
+float64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The datatype is assumed when an array is created. you can also specify it as follows,</p>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dtpye</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conditional-Statements">Conditional Statements<a class="anchor-link" href="#Conditional-Statements">&#182;</a></h2><hr>
+
 </div>
 </div>
 </div><div class="fragment">
@@ -11917,9 +12164,89 @@ Prior knowledge of programming is not assumed but it is good if the user has exp
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>
-<img src="images/python.png" width=500\>
-</center>
+<p>The three basic conditional statements are <strong>if</strong>, <strong>else</strong> and <strong>elif</strong>. The following program shows all three of them being used.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a value for n:&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span> <span class="c1"># Checks whether the value is integer or not</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">is</span> <span class="mi">1</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s2">&quot;Execution at if&quot;</span>
+        <span class="k">print</span> <span class="s2">&quot;The value of {}! = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+        <span class="nb">exit</span>
+    <span class="k">elif</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s2">&quot;Execution at elif&quot;</span>
+        <span class="k">print</span> <span class="s2">&quot;n is negative!&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s2">&quot;Execution at else&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">f</span> <span class="o">*=</span> <span class="n">i</span>
+        <span class="k">print</span> <span class="s2">&quot;The value of {}! = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s2">&quot;Factorial does not exist&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter a value for n:5
+Execution at else
+The value of 5! = 120
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Loops">Loops<a class="anchor-link" href="#Loops">&#182;</a></h2><hr>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-Loop">For Loop<a class="anchor-link" href="#For-Loop">&#182;</a></h3><p>This type of loop is used when you know the number of times the iterations has to be done beforehand. The For loop is generally invoked along with the <code>range</code> function as:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</pre></div>
+<p>where range creates a list of integers from 0 to 9.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="While-Loop">While Loop<a class="anchor-link" href="#While-Loop">&#182;</a></h3><p>This type of loop is used when you know the number of times the iterations has to be done beforehand. The For loop is generally invoked along with the <code>range</code> function as:</p>
+<div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">conditional</span> <span class="n">expression</span><span class="p">:</span>
+    <span class="n">statements</span>
+</pre></div>
+
 </div>
 </div>
 </div></div></section><section>
@@ -11928,14 +12255,10 @@ Prior knowledge of programming is not assumed but it is good if the user has exp
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>On a more serious note,</p>
-<ul>
-<li>It is <strong>open-source(free)</strong>, <strong>Cross-Platform</strong> and <strong>Interpreted</strong>.</li>
-<li>Simple Syntax, Easy to learn.</li>
-<li>Able to interface with other languages (especially <strong>fortran</strong> and <strong>C</strong>).</li>
-<li>Great choice of <strong>Vizualization</strong> tools.</li>
-<li>No <strong>Software piracy issues</strong> because it is <strong>open-source</strong>.</li>
-</ul>
+<h2 id="Loops">Loops<a class="anchor-link" href="#Loops">&#182;</a></h2><hr>
+<p>Exercise:</p>
+<p>Write a program to print out the letters of your name(Preferably given as user input).
+PS: the length of a string can be found out by typing <code>len(var)</code>. Where, <code>var</code> is a string variable. Also, for input, use the <code>raw_input</code> function.</p>
 
 </div>
 </div>
@@ -11945,17 +12268,75 @@ Prior knowledge of programming is not assumed but it is good if the user has exp
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Python is not absolutely advantageous. However, there are few advantages,</p>
-<ul>
-<li>Less lead time.</li>
-<li>Can be optimized to some extent for performance.</li>
-<li>Certain packages like numpy which is most frequently used are highly optimized.</li>
-<li>2D and 3D plotting are quite simple.</li>
-</ul>
-<p>Python is a general purpose language which can be tailored and used according to our needs. However, there are other languages that are used in the field of Atmospheric and Earth Sciences such as NCL, Ferret, Fortran, R etc...</p>
+<p>Solution:</p>
+<div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter your name:&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)):</span>
+    <span class="k">print</span> <span class="n">name</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
 
 </div>
 </div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Functions">Functions<a class="anchor-link" href="#Functions">&#182;</a></h2><hr>
+<p>Used to make code reusable. Functions are data-type independent. Functions are created by using the <code>def</code> keyword.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># This is a local variable. Accessible only inside the function</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span> <span class="c1"># Checks whether the value is integer or not</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="ow">is</span> <span class="mi">1</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;Execution at if&quot;</span>
+            <span class="k">print</span> <span class="s2">&quot;The value of {}! = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+            <span class="nb">exit</span>
+        <span class="k">elif</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">print</span> <span class="s2">&quot;Execution at elif&quot;</span>
+            <span class="k">print</span> <span class="s2">&quot;n is negative!&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;Execution at else&quot;</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">f</span> <span class="o">*=</span> <span class="n">i</span>
+            <span class="k">print</span> <span class="s2">&quot;The value of {}! = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">print</span> <span class="s2">&quot;Factorial does not exist&quot;</span>
+    <span class="k">return</span> <span class="n">f</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a value for n:&quot;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter a value for n:1
+Execution at if
+The value of 1! = 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></div></section></section>
 </div>
 </div>
